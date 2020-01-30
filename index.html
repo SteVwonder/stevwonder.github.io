@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="utf-8">
+	<title>Stephen Herbein</title>
+	<meta name="description" content="some some some">
+	<meta name="author" content="some">
+	<meta name="keywords" content="some, some, some">
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv/html5shiv.js" type="text/javascript"></script>
+		<script src="js/html5shiv/html5shiv-printshiv.js" type="text/javascript"></script>
+		<style type="text/css">.site_nav { border-bottom: 1px solid #d4d4d4; }</style>
+	<![endif]-->
+	<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="entypo/css/entypo.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="css/progressbar.css">
+	<link rel="stylesheet" href="css/lightbox.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="container">
+	
+		<div class="upbtnwrapp"><div class="upbtn"><span class="icon-up-open-big"></span></div></div>
+	
+		<!-- NAVIGATION -->
+		<nav class="site_nav" id="site_nav">
+			<ul class="">
+				<li><a href="#about_me">About Me</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#publications">Publications</a></li>
+				<li><a href="#my_expertise">My Expertise</a></li>
+			</ul>
+		</nav> <!-- /site_nav -->
+		<div id="aftermenuspace"></div>
+		<!-- HEADER -->
+		<header class="site_header centerise borderbtn">
+			<div id="logoline"><h1>Stephen Herbein</h1></div>
+			<h2>Computer Scientist</h2>
+		</header> <!-- /site_header -->
+		<!-- end HEADER -->
+		<div class="container-fluid page">
+		
+			<!-- ABOUT ME -->
+			<section class="row-fluid about_me" id="about_me">
+				<aside class="span3 aside_el">
+					<h2>About Me</h2>
+					<h5>professional profile<br /> and contact info</h5>
+				</aside>
+				<article class="span6 borderleft par_el">
+				  <span class="circle"><img style="float:left" src="img/mypic.jpg" alt=""/></span>
+					<p>I am a Computer Scientist at Lawrence Livermore
+					National Laboratory working on High Performance Computing.
+					My current research is on developing batch job scheduling
+					algorithms for next-generation HPC clusters.</p>
+				</article>
+				<div class="span3 cont_info">
+					<div class="soc">
+						<ul>
+							<li><a href="https://twitter.com/stephenherbein"><img src="img/icons/twitter.png" alt="" /></a></li>
+							<li><a href="https://www.linkedin.com/pub/stephen-herbein/51/482/776"><img src="img/icons/linkedin.png" alt="" /></a></li>
+						</ul>
+					</div>
+					<div class="info">
+						<ul>
+							<li><span class="icon-newspaper"></span><a id="cv_download" href="/Herbein_CV.pdf">Download CV</a></li>
+						</ul>
+					</div>
+				</div> <!-- /cont_info -->
+			</section> <!-- /about_me -->
+			<!-- end ABOUT ME -->
+
+			<!-- EXPERIENCE -->
+			<section class="row-fluid experience" id="experience">
+				<aside class="span3 aside_el">
+					<h2>Experience</h2>
+					<h5>where I have worked</h5>
+				</aside>
+				<div class="span9">
+					<div class="row-fluid">
+						<article class="span12  borderleft par_el in_spacing">
+							<span class="period">2018 - Present</span>
+							<div class="bigspacing">
+								<header>
+									<h2>Lawrence Livermore National Laboratory</h2>
+									<h3>Computer Scientist</h3>
+								</header>
+                                <p>Creating next-generation job schedulers for HPC clusters through development of the <a href="https://github.com/flux-framework/">Flux</a> resource manager.</p>
+							</div>
+						</article>
+					</div>
+					<div class="row-fluid">
+						<article class="span12  borderleft par_el in_spacing">
+							<span class="period">2012 - 2018</span>
+							<div class="bigspacing">
+								<header>
+									<h2>University of Delaware</h2>
+									<h3>Research Assistant</h3>
+								</header>
+                                <p><b>2014-2018: </b>Created next-generation I/O-aware and hierarchical job schedulers for HPC clusters utilizing the <a href="https://github.com/flux-framework/">Flux</a> resource manager.</p>
+								<p><b>2014: </b>Developed a suite of tools to profile, auto-tune, and optimize applications developed with the parallel I/O library <a href="https://www.olcf.ornl.gov/center-projects/adios/">ADIOS.</a></p>
+								<p><b>2013: </b>Integrated in-transit analysis and staging into the scientific application <a href="https://sites.google.com/a/cmscc.org/qmcpack/">QMCPack</a> to improve I/O performance and scalability.</p>
+								<p><b>2012: </b>Developed a crowdsourcing web application, <a href="http://www.exscitech.org">ExSciTecH</a>, to complement the volunteer computing project <a href="http://docking.cis.udel.edu/">Docking@Home.</a></p>
+							</div>
+						</article>
+					</div>
+					<div class="row-fluid">
+						<article class="span12  borderleft par_el in_spacing">
+							<span class="period">2014 - 2017<br>(Summers)</span>
+							<div class="bigspacing">
+								<header>
+									<h2>Lawrence Livermore National Laboratory</h2>
+									<h3>Research Intern</h3>
+								</header>
+                                <p><b>2017:</b> Integrated my hierarchical scheduler with the Uncertainty Quantification Pipeline (UQP), resulting in a 37% improvement in workload runtime</p>
+                                <p><b>2016:</b> Added dynamicity to my hierarchical scheduler to eliminate resource fragmentation</p>
+                                <p><b>2015:</b> Developed an automatic job aggregator and hierarchical scheduler, resulting in a 4x speed up over the existing scheduler</p>
+                                <p><b>2014:</b> Developed a discrete-event simulator for the next-generation resource manager, <a href="https://github.com/flux-framework/">Flux</a></p>
+							</div>
+						</article>
+					</div>
+					<div class="row-fluid">
+						<article class="span12  borderleft par_el in_spacing">
+							<span class="period">Summer 2013</span>
+							<div class="bigspacing">
+								<header>
+									<h2>Oak Ridge National Laboratory</h2>
+									<h3>Science Undergraduate Laboratory Intern (SULI)</h3>
+								</header>
+							<p>Integrated <a href="https://www.olcf.ornl.gov/center-projects/adios/">ADIOS</a>, ORNL's IO framework, into <a href="https://sites.google.com/a/cmscc.org/qmcpack/">QMCPack</a>, a quantum monte-carlo simulator.</p>
+							<p>Examined the performance of various IO methods and techniques on peta-scale systems like <a href="http://www.olcf.ornl.gov/titan/">Titan</a>.</p>
+							</div>
+						</article>
+					</div>
+					<div class="row-fluid">
+						<article class="span12  borderleft par_el in_spacingbottom">
+							<span class="period">Summer 2012</span>
+							<div class="bigspacing">
+								<header>
+									<h2>University of Houston</h2>
+									<h3>Research Experience for Undergraduates (REU) Intern</h3>
+								</header>
+								<p>Optimized <a href="http://dl.acm.org/citation.cfm?id=1612233">VolpexMPI</a> library for use on large-scale clusters.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section> <!-- /experience -->
+			<!-- end EXPERIENCE -->
+
+			<!-- EDUCATION -->
+			<section class="row-fluid education" id="education">
+				<aside class="span3 aside_el">
+					<h2>Education</h2>
+					<h5>my college<br /> education</h5>
+				</aside>
+				<div class="span9">
+					<div class="row-fluid">
+						<article class="span12  borderleft par_el in_spacing">
+							<span class="period">2014 - 2018</span>
+							<div class="bigspacing">
+								<header>
+									<h2>University of Delaware</h2>
+									<h3>PhD in Computer & Information Sciences</h3>
+								</header>
+								<p> 4.0 GPA<br></p>
+							</div>
+						</article>
+					</div>
+					<div class="row-fluid">
+						<article class="span12  borderleft par_el in_spacing">
+							<span class="period">2014 - 2016</span>
+							<div class="bigspacing">
+								<header>
+									<h2>University of Delaware</h2>
+									<h3>M.S. in Computer Science</h3>
+								</header>
+								<p> 4.0 GPA<br></p>
+							</div>
+						</article>
+					</div>
+					<div class="row-fluid">
+						<article class="span12  borderleft par_el in_spacing">
+							<span class="period">2010 - 2014</span>
+							<div class="bigspacing">
+								<header>
+									<h2>University of Delaware</h2>
+									<h3>B.S. in Computer Science</h3>
+								</header>
+								<p>Honors Degree with Distinction<br>
+								3.932 GPA<br>
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section> <!-- /education -->
+			<!-- end EDUCATION -->
+
+			<!-- PUBLICATIONS -->
+			<section class="row-fluid publications" id="publications">
+				<aside class="span3 aside_el">
+					<h2>Selected Publications</h2>
+					<h5>my peer-reviewed<br /> publications</h5>
+				</aside>
+				<div class="span9">
+                  <div class="par_el"><header><h2>Conference Papers</h2></header></div>
+				  <div class="row-fluid">
+					<article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2020</span>
+					  <div class="bigspacing">
+                        <p>M. Wyatt, <b>S. Herbein</b>, K. Shoga, T. Gamblin, and M. Taufer. CanarIO: Sounding the Alarm on IO-Related Performance Degradation. In <i>Proceedings of the 34th IEEE International Parallel and Distributed Processing Symposium</i>, IPDPS, New Orleans, LA, May 2020. (Conditionally Accepted).</p>
+					  </div>
+					</article>
+				  </div>
+				  <div class="row-fluid">
+					<article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2018</span>
+					  <div class="bigspacing">
+                        <p>S.D. Pollard, N. Jain, <b>S. Herbein</b>, and A. Bhatele. <a href="https://dx.doi.org/10.1109/SC.2018.00029">Evaluation of an Interference-free Node Allocation Policy on Fat-tree Clusters.</a> In <i>Proceedings of the International Conference for High Performance Computing, Networking, Storage, and Analysis</i>, SC, pages 333– 345, Dallas, TX, November 2018.</p>
+                        <p>M. Wyatt, <b>S. Herbein</b>, T. Gamblin, A. Moody, D.H. Ahn, and M. Taufer. <a href="https://dx.doi.org/10.1145/3225058.3225091">PRIONN: Predicting Runtime and IO using Neural Networks</a>. In <i>Proceedings of the 47th International Conference on Parallel Processing</i>, ICPP, Eugene, OR, August 2018.</p>
+					  </div>
+					</article>
+				  </div>
+				  <div class="row-fluid">
+					<article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2016</span>
+					  <div class="bigspacing">
+                        <p>R. McKenna, <b>S. Herbein</b>, A. Moody, T. Gamblin, and M. Taufer. Scalable I/O-Aware Job Scheduling for Burst Buffer Enabled HPC Clusters. In <i>Proceedings of the IEEE Cluster Conference</i>. Taipei, Taiwan, September 2016.</p>
+                        <p><b>S. Herbein</b>, D. H. Ahn, D. Lipari, T. R.W. Scogland, M. Stearman, M. Grondona, J. Garlick, B. Springmeyer, and M. Taufer. Scalable I/O-Aware Job Scheduling for Burst Buffer Enabled HPC Clusters. In <i>Proceedings of the 25th International Symposium on High-Performance Parallel and Distributed Computing (HPDC)</i>. Kyoto, Japan, June 2016.</p>
+                        <p><b>S. Herbein</b>, A. Dusia, A. Landwehr, S. McDaniel, J. Monsalve, Y. Yang, S. R. Seelam, and M. Taufer. Resource Management for Running HPC Applications in Container Clouds. In <i>Proceedings of the 31st International Supercomputing Conference (ISC)</i>. Leipzig, Germany, June 2016.</p>
+					  </div>
+					</article>
+				  </div>
+				  <div class="row-fluid">
+					<article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2014</span>
+					  <div class="bigspacing">
+                        <p><b>S. Herbein</b>, S. Klasky, and M. Taufer. Benchmarking the Performance of Scientific Applications with Irregular I/O at the Extreme Scale. In the <i>Proceedings of the Seventh International Workshop on Parallel Programming Models and Systems Software for High-End Computing (P2S2)</i>. Minneapolis, Minnesota, September 2014.</p>
+					  </div>
+					</article>
+				  </div>
+				  <div class="row-fluid">
+					<article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2013</span>
+					  <div class="bigspacing">
+                        <p><b>S. Herbein</b>, M. Matheny, M. Wezowicz, J. Kroger, J. Kim, S. Klasky, and M. Taufer. Performance Impact of I/O on QMCPack Simulations at the Petascale and Beyond. In the <i>Proceedings of the 16th IEEE International Conferences on Computational Science and Engineering</i>, Sydney, Australia, December 2013.</p>
+                        <p>S. Schlachter, <b>S. Herbein</b>, S. Ou, J.S. Logan, S. Patel, and M. Taufer. Efficient Sodium Dodecyl Sulfate (SDS) Simulations on Multi-GPU Nodes of XSEDE High-end Clusters. In the <i>Proceedings of the Eighth IEEE International Conference on e-Science and Grid Technologies (eScience)</i>, Beijing, China, October 2013.</p>
+                      </div>
+					</article>
+				  </div>
+
+                  <div class="par_el"><header><h2>Journal Papers</h2></header></div>
+				  <div class="row-fluid">
+				    <article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2019</span>
+					  <div class="bigspacing">
+                        <p>R. Searles, <b>S. Herbein</b>, T. Johnston, M. Taufer, and S. Chandrasekaran. <a href="https://dx.doi.org/10.1504/IJHPCN.2019.097054">Creating a Portable, High-Level Graph Analytics Paradigm For Compute and Data-Intensive Applications.</a> <i>International Journal of High Performance Computing and Networking</i>, 13:105–118, Jan 2019.</p>
+                      </div>
+                    </article>
+                  </div>
+				  <div class="row-fluid">
+				    <article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2016</span>
+					  <div class="bigspacing">
+					    <p><b>S. Herbein</b>, S. McDaniel, N. Podhorszki, J. S. Logan, S. Klasky, and M. Taufer. <a href="http://dx.doi.org/10.1016/j.parco.2015.10.009">Performance characterization of irregular I/O at the extreme scale.</a> <i>Parallel Computing</i>, January 2016.</p>
+                      </div>
+                    </article>
+                  </div>
+				  <div class="row-fluid">
+				    <article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2014</span>
+					  <div class="bigspacing">
+					    <p>S. Schlachter, <b>S. Herbein</b>, S. Ou, J. S. Logan, S. Patel, and M. Taufer. Pursuing Resource Utilization and Coordinated Progression in GPU-enabled Molecular Simulations. <i>IEEE Design & Test of Computers</i>, February 2014.</p>
+					  </div>
+				    </article>
+				  </div>
+
+                  <div class="par_el"><header><h2>Workshop Papers</h2></header></div>
+				  <div class="row-fluid">
+				    <article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2019</span>
+					  <div class="bigspacing">
+                        <p><b>S. Herbein</b>, D. Domyancic, P. Minner, R.F. da Silva, I. Laguna, and D.H. Ahn. <a href="https://doi.org/10.1145/3322789.3328745">MCEM: Multi-Level Cooperative Exception Model for HPC Workflows</a>. In <i>Proceedings of the 9th International Workshop on Runtime and Operating Systems for Supercomputers</i>, ROSS, June 2019.</p>
+                      </div>
+                    </article>
+                  </div>
+				  <div class="row-fluid">
+				    <article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2018</span>
+					  <div class="bigspacing">
+                        <p>D.H. Ahn, N. Bass, A. Chu, J. Garlick, M. Grondona, <b>S. Herbein</b>, J. Koning, T. Patki, T.R.W. Scogland, B. Springmeyer, and M. Taufer. <a href="https://dx.doi.org/10.1109/WORKS.2018.00007">Flux: Overcoming Scheduling Challenges for Exascale Workflows</a>. In <i>Proceedings of the 13th Workshop on Workflows in Support of Large-Scale Science</i>, WORKS, pages 10–19, Dallas, TX, November 2018.</p>
+                      </div>
+                    </article>
+                  </div>
+				  <div class="row-fluid">
+				    <article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2016</span>
+					  <div class="bigspacing">
+					    <p>R. Searles*, <b>S. Herbein*</b>, and S. Chandrasekaran. <a href="https://dx.doi.org/10.1109/WACCPD.2016.012">A Portable, High-Level Graph Analytics Framework Targeting Distributed, Heterogeneous Systems</a>. In the <i>Third Workshop on Accelerator Programming Using Directives (WACCPD)</i>, Salt Lake City, UT, November 2016. (*Equal contribution).</p>
+                      </div>
+                    </article>
+                  </div>
+				  <div class="row-fluid">
+				    <article class="span12  borderleft par_el in_spacingbottom">
+					  <span class="period">2014</span>
+					  <div class="bigspacing">
+					    <p><b>S. Herbein</b>, S. Klasky, and M. Taufer. <a href="http://dx.doi.org/10.1109/ICPPW.2014.46">Benchmarking the Performance of Scientific Applications with Irregular I/O at the Extreme Scale</a>. In the <i>43rd International Conference on Parallel Processing Workshops (ICCPW)</i>, Sept 2014.</p>
+					  </div>
+				    </article>
+				  </div>
+
+                </div>
+
+			</section> <!-- /publications -->
+			<!-- end PUBLICATIONS -->
+					
+			<!-- MY EXPERTISE -->
+			<section class="row-fluid my_expertise" id="my_expertise">
+				<aside class="span3 aside_el">
+					<h2>Programming Languages</h2>
+					<h5>languages<br /> that I use</h5>
+				</aside>
+				<article class="span4 borderleft par_el">
+				  <p>This is by no means an exhaustive list of the languages I know, just the ones I use most frequently.</p>
+				</article>
+				<div class="span5 skill_level">
+					<h4>Python</h4>
+					<div class="progressbar percent_90">
+						<div class="progressbar-inner"></div>
+					</div>
+					<h4>C</h4>
+					<div class="progressbar percent_70">
+						<div class="progressbar-inner"></div>
+					</div>
+					<h4>Bash</h4>
+					<div class="progressbar percent_60">
+						<div class="progressbar-inner"></div>
+					</div>
+					<h4>C++</h4>
+					<div class="progressbar percent_30">
+						<div class="progressbar-inner"></div>
+					</div>
+				</div> <!-- /skill_level -->
+			</section> <!-- /my_expertise -->
+			<!-- end MY EXPERTISE -->
+			
+		</div> <!-- /page -->
+	</div> <!-- /container -->
+</div> <!-- /wrapper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="js/parsley.min.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>
