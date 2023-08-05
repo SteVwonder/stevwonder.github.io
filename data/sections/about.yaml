@@ -1,0 +1,17 @@
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+  icon: bi-person-circle
+
+name: Stephen Herbein
+designation: Senior Software Engineer
+#quote: "Foo bar baz"
+#quotee: Bob
+
+bigProfilePicture: img/profile-big.jpg
+
+summary: 'I am a software engineer specializing in distributed systems and job scheduling. I am passionate about learning and making the world a better place.'

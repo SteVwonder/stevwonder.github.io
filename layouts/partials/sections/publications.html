@@ -1,0 +1,36 @@
+<div class="container mw-md">
+  <h2 class="text-center display-3 fw-semibold ls-2 mb-5"><i class="{{ .section.icon }} color"></i> {{ .section.name }}</h2>
+  <div class="row gy-4">
+    {{ range $idx, $val := .publications }}
+	<div class="col-12">
+	  <div class="card bg-contrast-100 rounded-1 border-0">
+		<div class="card-body p-4">
+		  <div class="toggle mb-0">
+			<div class="toggle-header d-block">
+			  <div class="d-flex w-100">
+				<div class="toggle-title fs-4 mb-2">
+				  {{ $val.name }}
+				</div>
+			  </div>
+			  <div class="small fw-normal mb-2 op-06">{{ $val.authors | replaceRE "(S. Herbein)" "<strong class=\"color\">$1</strong>" | safeHTML }}</div>
+              {{ if $val.note }}
+			  <div class="badge bg-warning fs-6 fw-normal mt-2 me-2">{{ $val.note }}</div>
+              {{ end }}
+              <small class="fw-normal"><i>{{ $val.venue }}</i>, {{ $val.date }}</small>
+			  <div class="position-absolute bottom-0 end-0 d-flex align-items-center">
+				<a href="{{ $val.link }}" class="bi-link fs-5 text-contrast-900 h-text-color ms-3" style="transform: rotate(45deg);"></a>
+			  </div>
+			</div>
+			<div class="toggle-content">
+			  <div class="mt-4 border-top pt-4">
+				<h4 class="mb-3">Abstract</h4>
+				{{ $val.abstract | markdownify }}
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+    {{ end }}
+  </div>
+</div>

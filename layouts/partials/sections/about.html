@@ -1,0 +1,24 @@
+<!-- About
+     ============================================= -->
+<div class="container mw-md pt-lg-3">
+  <div class="row align-items-center justify-content-between">
+	<div class="col-md-5">
+	  <h2 class="display-2 fw-bolder text-uppercase ls-2">{{ .name }}</h2>
+      {{ if .summary }}
+      <blockquote class="fs-6 border-color">
+        <p class="mb-0">{{ .summary }}</p>
+      </blockquote>
+      {{ end }}
+      {{ if .quote }}
+	  <blockquote class="fs-6 border-color">
+        <p>{{ .quote }}</p>
+        <footer class="blockquote-footer font-monospace mb-0">{{ .quotee }}</footer>
+      </blockquote>
+      {{ end }}
+	</div>
+
+	<div class="col-md-7">
+	  <img src="{{ .bigProfilePicture }} " alt="Stephen's Profile Picture">
+	</div>
+  </div>
+</div>

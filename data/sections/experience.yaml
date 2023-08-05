@@ -1,0 +1,73 @@
+section:
+  name: Experience
+  id: experience
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  template: sections/experience.html
+  icon: bi-briefcase
+
+experience:
+  - position: Senior Software Engineer
+    company: Nvidia
+    year: 2022 - Present
+    summary: >-
+      [Maglev](https://www.nvidia.com/en-us/on-demand/session/gtcfall20-a21846/): Creating MLOps infrastructure for autonomous vehicle development
+  - position: Computer Scientist
+    company: Lawrence Livermore Nat'l Lab
+    year: 2018 - 2022
+    summary: >-
+      - [Flux](https://github.com/flux-framework/): developed features,
+        supported users, and readied code for future Exascale system - El
+        Capitan
+      - HPC+Cloud: PI of $175K project to find gaps in LLNL’s converged
+        computing capabilities
+      - [Exaworks](https://exaworks.org/): created a portable, performant, and
+        hardened workflow SDK
+      - [ZFP](https://github.com/LLNL/zfp): developed python bindings for this
+        LLNL compression library
+  - position: Research Assistant
+    company: University of Delaware
+    year: 2012 - 2018
+    summary: >-
+      - 2014-2018: Created next-generation I/O-aware and hierarchical job
+        schedulers for HPC clusters utilizing the
+        [Flux](https://github.com/flux-framework/) resource manager.
+      - 2014: Developed a suite of tools to profile, auto-tune, and optimize
+        applications developed with the parallel I/O library
+        [ADIOS](https://www.olcf.ornl.gov/center-projects/adios/).
+      - 2013: Integrated in-transit analysis and staging into the scientific
+        application [QMCPack](https://sites.google.com/a/cmscc.org/qmcpack/) to
+        improve I/O performance and scalability.
+      - 2012: Developed a crowdsourcing web application,
+        [ExSciTecH](http://www.exscitech.org/), to complement the volunteer
+        computing project [Docking@Home](http://docking.cis.udel.edu/).
+  - position: Research Intern
+    company: Lawrence Livermore Nat'l Lab
+    year: 2014-2017
+    summary: >-
+      - 2017: Integrated my hierarchical scheduler with the Uncertainty
+        Quantification Pipeline (UQP), resulting in a 37% improvement in workload
+        runtime
+      - 2016: Added dynamicity to my hierarchical scheduler to eliminate
+        resource fragmentation
+      - 2015: Developed an automatic job aggregator and hierarchical scheduler,
+        resulting in a 4x speed up over the existing scheduler
+      - 2014: Developed a discrete-event simulator for the next-generation
+        resource manager, [Flux](https://github.com/flux-framework/)
+  - position: Science Undergrad Lab Intern (SULI)
+    company: Oak Ridge Nat'l Lab
+    year: 2013
+    summary: >-
+      - Integrated [ADIOS](https://www.olcf.ornl.gov/center-projects/adios/),
+        ORNL's IO framework, into
+        [QMCPack](https://sites.google.com/a/cmscc.org/qmcpack/), a quantum
+        monte-carlo simulator.
+      - Examined the performance of various IO methods and techniques on
+        peta-scale systems like [Titan](http://www.olcf.ornl.gov/titan/).
+  - position: Research Experience for Undergraduates (REU) Intern
+    company: University of Houston
+    year: 2012
+    summary: >-
+      - Optimized [VolpexMPI](http://dl.acm.org/citation.cfm?id=1612233) library
+        for use on large-scale clusters.
