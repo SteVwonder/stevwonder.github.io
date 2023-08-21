@@ -1,0 +1,145 @@
+section:
+  name: Top Publications
+  id: publications
+  enable: true
+  weight: 10
+  showOnNavbar: true
+  template: sections/publications.html
+  icon: bi-journal-text
+
+publications:
+  - name: Scalable Composition and Analysis Techniques for Massive Scientific Workflows
+    authors: D. Ahn, X. Zhang, J. Mast, S. Herbein, F. Di Natale, D. Kirshner, S. Ade Jacobs, I. Karlin, D. Milroy, B. De Supinski, B. Van Essen, J. Allen, and F. C. Lightstone
+    venue: 18th IEEE International Conference on e-Science (e-Science)
+    date: Oct 2022
+    note: Best Paper
+    link: https://ieeexplore.ieee.org/document/9973491
+    abstract: >-
+      Composite science workflows are gaining traction to manage the combined
+      effects of (1) extreme hardware heterogeneity in new High Performance
+      Computing (HPC) systems and (2) growing software complexity – effects
+      necessitated by the convergence of traditional HPC with data
+      sciences. Composing, analyzing, and optimizing a composite workflow
+      remains highly challenging as the component technologies are generally
+      developed in isolation and often feature widely varying levels of
+      performance, scalability, and interoperability. In this paper, we propose
+      novel workflow composition and analysis techniques to create and optimize
+      a scalable and effective composite workflow for heterogeneous HPC centers,
+      and define the performance space of variables that impact composite
+      workflow performance. We present PerfFlowAspect, an Aspect Oriented
+      Programming (AOP)-based tool to perform cross-cutting performance analysis
+      of composite workflows and better understand the impact of key performance
+      variables on workflows. Our solution directly addresses AOP concerns that
+      can affect workflow performance and covers the full software lifecycle,
+      ranging from the workflow's initial composition through performance
+      analysis and optimization. We use our science workflow composition
+      techniques to implement the American Heart Association Molecule Screening
+      (AHA MoleS) workflow. Through experimentation, we demonstrate that tuning
+      a single performance variable can improve AHA MoleS workflow performance
+      by a factor of up to 2.45x. Our evaluation suggests that our techniques
+      can significantly enhance the ability of a multi-disciplinary research and
+      development team to create a high performance composite workflow.
+  - name: "Flux: Overcoming Scheduling Challenges for Exascale Workflows"
+    authors: D.H. Ahn, N. Bass, A. Chu, J. Garlick, M. Grondona, S. Herbein, J. Koning, T. Patki, T.R.W. Scogland, B. Springmeyer, and M. Taufer
+    venue: 13th Workshop on Workflows in Support of Large-Scale Science (WORKS)
+    date: November 2018
+    link: https://dx.doi.org/10.1109/WORKS.2018.00007
+    abstract: >-
+      Many emerging scientific workflows that target high-end HPC systems
+      require complex interplay with the resource and job management
+      software~(RJMS). However, portable, efficient and easy-to-use scheduling
+      and execution of these workflows is still an unsolved problem. We present
+      Flux, a novel, hierarchical RJMS infrastructure that addresses the key
+      scheduling challenges of modern workflows in a scalable, easy-to-use, and
+      portable manner. At the heart of Flux lies its ability to be nested
+      seamlessly within batch allocations created by other schedulers as well as
+      itself. Once a hierarchy of Flux instance is created within each
+      allocation, its consistent and rich set of well-defined APIs portably and
+      efficiently support those workflows that can often feature non-traditional
+      execution patterns such as requirements for complex co-scheduling, massive
+      ensembles of small jobs and coordination among jobs in an ensemble.
+  - name: Scalable I/O-Aware Job Scheduling for Burst Buffer Enabled HPC Clusters
+    authors: S. Herbein, D. H. Ahn, D. Lipari, T. R.W. Scogland, M. Stearman, M. Grondona, J. Garlick, B. Springmeyer, and M. Taufer 
+    venue: 25th International Symposium on High-Performance Parallel and Distributed Computing (HPDC)
+    date: June 2016
+    link: https://dl.acm.org/doi/10.1145/2907294.2907316
+    abstract: >-
+      The economics of flash vs. disk storage is driving HPC centers to
+      incorporate faster solid-state burst buffers into the storage hierarchy in
+      exchange for smaller parallel file system (PFS) bandwidth. In systems with
+      an underprovisioned PFS, avoiding I/O contention at the PFS level will
+      become crucial to achieving high computational efficiency. In this paper,
+      we propose novel batch job scheduling techniques that reduce such
+      contention by integrating I/O awareness into scheduling policies such as
+      EASY backfilling. We model the available bandwidth of links between each
+      level of the storage hierarchy (i.e., burst buffers, I/O network, and
+      PFS), and our I/O-aware schedulers use this model to avoid contention at
+      any level in the hierarchy. We integrate our approach into Flux, a
+      next-generation resource and job management framework, and evaluate the
+      effectiveness and computational costs of our I/O-aware scheduling. Our
+      results show that by reducing I/O contention for underprovisioned PFSes,
+      our solution reduces job performance variability by up to 33% and
+      decreases I/O-related utilization losses by up to 21%, which ultimately
+      increases the amount of science performed by scientific workloads.
+  - name: "PRIONN: Predicting Runtime and IO using Neural Networks"
+    authors: M. Wyatt, S. Herbein, T. Gamblin, A. Moody, D.H. Ahn, and M. Taufer
+    venue: 47th International Conference on Parallel Processing (ICPP)
+    date: August 2018
+    note:
+    link: https://dx.doi.org/10.1145/3225058.3225091
+    abstract: >-
+      For job allocation decision, current batch schedulers have access to and
+      use only information on the number of nodes and runtime because it is
+      readily available at submission time from user job scripts. User-provided
+      runtimes are typically inaccurate because users overestimate or lack
+      understanding of job resource requirements. Beyond the number of nodes and
+      runtime, other system resources, including IO and network, are not
+      available but play a key role in system performance. There is the need for
+      automatic, general, and scalable tools that provide accurate resource
+      usage information to schedulers so that, by becoming resource-aware, they
+      can better manage system resources.
+
+
+      We tackle this need by presenting a tool for Predicting Runtime and IO
+      using Neural Networks (PRIONN). PRIONN automates prediction of per-job
+      runtime and IO resource usage, enabling IO-aware scheduling on HPC
+      systems. The novelty of our tool is the input of whole job scripts into
+      deep learning models that allows complete automation of runtime and IO
+      resource predictions. We demonstrate the power of PRIONN with runtime and
+      IO resource predictions applied to IO-aware scheduling for real HPC
+      data. Specifically, we achieve over 75% mean and 98% median accuracy for
+      runtime and IO predictions across 300,000 jobs from a real HPC machine. We
+      combine our per-job runtime and IO predictions with queue and system
+      simulations to predict future system IO usage accurately. We predict over
+      50% of IO bursts in advance on a real HPC system.
+
+  - name: Advanced Schedulers For Next-Generation HPC Systems
+    authors: S. Herbein
+    venue: University of Delaware
+    date: 2018
+    note: Thesis
+    link: /files/herbein-thesis.pdf
+    abstract: >-
+      High performance computing (HPC) is undergoing many changes at both the
+      system and workload levels. At the system level, data movement is becoming
+      more costly in relation to computation and HPC centers are becoming
+      increasingly power-constrained. In an effort to adapt to these trends, HPC
+      systems are including new resources such as burst buffers and GPUs which
+      makes the resource set larger and more diverse. At the workload level, new
+      ensemble workloads,such as uncertainty quantification (UQ), are emerging
+      within HPC, driving up the workload scale in terms of the number of
+      jobs. Existing HPC scheduling models are unable to adapt to these changes,
+      leading to degraded system efficiency and application performance. In this
+      thesis, we claim that new schedulers are needed to overcome the challenges
+      mentioned above and efficiently manage the next-generation of HPC
+      systems. To this end we design, implement, and evaluate three fundamental
+      transformations to the existing scheduling models. First, we integrate
+      I/O-awareness into existing scheduling policies and demonstrate that
+      I/O-aware scheduling increase the efficiency of burst buffer-enabled HPC
+      systems. Second,we expand our I/O-aware scheduler to incorporate the
+      accurate knowledge of application I/O utilization patterns provided by
+      machine learning models. Third, we design a prototype scheduler based on
+      the fully hierarchical scheduling model and show that it reduces scheduler
+      overhead and increases job throughput on synthetic and real-world ensemble
+      workloads, such as UQ. Our work is the first step towards a new generation
+      of scheduling models for HPC.

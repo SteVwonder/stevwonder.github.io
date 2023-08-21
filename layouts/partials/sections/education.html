@@ -1,0 +1,67 @@
+<div class="container mw-md pt-lg-3">
+  <div class="row gx-5 justify-content-center">
+	<div class="col-md-10">
+      <h2 class="text-center display-3 fw-semibold ls-2">
+        <i class="{{ .section.icon }} color"></i>
+        Education
+      </h2>
+	  <div class="row gy-5 justify-content-between">
+        <div class="col-md-6 mt-5">
+          <h3 class="border-bottom border-color border-width-3 d-inline-block">
+            <i class="bi-mortarboard"></i>
+            Degrees
+          </h3>
+		  <div class="feature-box-border-vertical col-mb-30 justify-content-center align-items-center">
+            {{ $maxIdx := (sub (len .degrees) 1) }}
+            {{ range $idx, $val := (sort .degrees "year" "desc") }}
+            {{ $classes := slice "col-12" "feature-box" "fbox-active" "fbox-light" "fbox-sm" }}
+            {{ if (lt $idx $maxIdx) }}
+            {{ $classes = $classes | append "fbox-border" }}
+            {{ else }}
+            {{ $classes = $classes | append "noborder" }}
+            {{ end }}
+			<div class="{{ delimit $classes " " }}">
+			  <div class="fbox-icon">
+				<i class="fa-solid fa-check"></i>
+			  </div>
+			  <div class="fbox-content">
+				<h3>{{ $val.name }}</h3>
+				<p class="op-08 mt-0">{{ $val.issuer }}, {{ $val.year }}</p>
+                {{ if $val.gpa }}
+                <p class="mt-0">{{ $val.gpa }} GPA</p>
+                {{ end }}
+			  </div>
+			</div>
+            {{ if (lt $idx $maxIdx) }}
+			<div class="clear"></div>
+            {{ end }}
+            {{ end }}
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-5">
+		  <h3 class="border-bottom border-color border-width-3 d-inline-block">
+            <i class="bi-cloud"></i>
+            Online Courses
+          </h3>
+		  <div class="clear"></div>
+          {{ range $elem_idx, $val := (sort .online "year" "desc") }}
+          {{ $classes := slice "feature-box" "fbox-plain" "fbox-sm" }}
+          {{ if gt $elem_idx 0 }}
+          {{ $classes = $classes | append "mt-5" }}
+          {{ end }}
+		  <div class="{{ delimit $classes " " }}">
+			<div class="fbox-icon">
+			  <i class="fa-solid fa-check"></i>
+			</div>
+			<div class="fbox-content">
+			  <h3>{{ $val.name }}</h3>
+			  <p class="op-08 mt-0">{{ $val.issuer }}, {{ $val.year }}</p>
+			</div>
+		  </div>
+          {{ end }}
+		</div>
+	  </div>
+    </div>
+  </div>
+</div>

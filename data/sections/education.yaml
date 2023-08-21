@@ -1,0 +1,29 @@
+section:
+  name: Education
+  id: education
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  template: sections/education.html
+  icon: bi-book
+
+degrees:
+  - name: Ph.D. in Computer Science
+    issuer: University of Delaware
+    year: 2018
+    gpa: "4.0"
+  - name: M.S. in Computer Science
+    issuer: University of Delaware
+    year: 2016
+    gpa: "4.0"
+  - name: B.S. in Computer Science
+    issuer: University of Delaware
+    year: 2014
+    gpa: 3.932
+
+online:
+  - name: Self-Driving Cars Specialization
+    issuer: Coursera
+    year: 2022
+    link: https://www.coursera.org/specializations/self-driving-cars
+

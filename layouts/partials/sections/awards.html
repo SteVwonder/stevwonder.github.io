@@ -1,0 +1,68 @@
+<div class="container mw-md">
+  <div class="col-md-12">
+    <div class="row">
+      <h2 class="text-center display-3 fw-semibold ls-2 mb-0">
+        <i class="{{ .section.icon }} color"></i>
+        Awards
+      </h2>
+      <div class="col-md-6 mt-5">
+		<h3 class="border-bottom border-color border-width-3 d-inline-block">
+          <i class="bi-award"></i>
+          Professional
+        </h3>
+		<div class="row feature-box-border-vertical col-mb-30 justify-content-center align-items-center">
+          {{ $maxIdx := (sub (len .awards.professional) 1) }}
+          {{ range $idx, $val := (sort .awards.professional "year" "desc") }}
+          {{ $classes := slice "col-12" "feature-box" "fbox-active" "fbox-light" "fbox-sm" }}
+          {{ if (lt $idx $maxIdx) }}
+          {{ $classes = $classes | append "fbox-border" }}
+          {{ else }}
+          {{ $classes = $classes | append "noborder" }}
+          {{ end }}
+		  <div class="{{ delimit $classes " " }}">
+			<div class="fbox-icon">
+			  <i class="fa-solid fa-check"></i>
+			</div>
+			<div class="fbox-content">
+			  <h3>{{ $val.name }}</h3>
+			  <p class="op-08 mt-0">{{ $val.issuer }}, {{ $val.year }}</p>
+			</div>
+		  </div>
+          {{ if (lt $idx $maxIdx) }}
+		  <div class="clear"></div>
+          {{ end }}
+          {{ end }}
+		</div>
+	  </div>
+	  <div class="col-md-6 mt-5">
+	    <h3 class="border-bottom border-color border-width-3 d-inline-block">
+          <i class="bi-award"></i>
+          Academic
+        </h3>
+	    <div class="row feature-box-border-vertical col-mb-30 justify-content-center align-items-center">
+          {{ $maxIdx := (sub (len .awards.academic) 1) }}
+          {{ range $idx, $val := (sort .awards.academic "year" "desc") }}
+          {{ $classes := slice "col-12" "feature-box" "fbox-active" "fbox-light" "fbox-sm" }}
+          {{ if (lt $idx $maxIdx) }}
+          {{ $classes = $classes | append "fbox-border" }}
+          {{ else }}
+          {{ $classes = $classes | append "noborder" }}
+          {{ end }}
+		  <div class="{{ delimit $classes " " }}">
+		    <div class="fbox-icon">
+			  <i class="fa-solid fa-check"></i>
+		    </div>
+		    <div class="fbox-content">
+			  <h3>{{ $val.name }}</h3>
+			  <p class="op-08 mt-0">{{ $val.issuer }}, {{ $val.year }}</p>
+		    </div>
+		  </div>
+          {{ if (lt $idx $maxIdx) }}
+		  <div class="clear"></div>
+          {{ end }}
+          {{ end }}
+	    </div>
+      </div>
+    </div>
+  </div>
+</div>

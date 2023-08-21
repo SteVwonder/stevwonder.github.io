@@ -1,0 +1,41 @@
+<div class="container mw-md">
+  <div class="row gx-5 justify-content-center">
+    <div class="col-md-12">
+      <h2 class="text-center display-3 fw-semibold ls-2 mb-5">
+        <i class="{{ .section.icon }} color"></i>
+        Experience
+      </h2>
+      {{ $maxIdx := (sub (len .experience) 1) }}
+      {{ range $idx, $val := .experience }}
+      {{ if (eq $idx 0) }}
+      <div class="toggle mb-0" data-state="open">
+        {{ else }}
+	    <div class="toggle mb-0">
+          {{ end }}
+	      <div class="toggle-header align-items-center">
+            <div class="toggle-title">
+		      <div class="toggle-title fs-4">
+			    {{ $val.position }}
+		      </div>
+              <div class="toggle-title fw-extralight">
+                {{ $val.company }}
+              </div>
+            </div>
+		    <h3 class="mb-0 font-body me-3">{{ $val.year }}</h3>
+		    <div class="toggle-icon fs-4">
+		      <i class="toggle-closed bi-plus"></i>
+		      <i class="toggle-open bi-dash color"></i>
+		    </div>
+	      </div>
+	      <div class="toggle-content">
+            {{ $val.summary | markdownify }}
+          </div>
+	    </div>
+        {{ if (lt $idx $maxIdx) }}
+	    <div class="divider my-4"></div>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

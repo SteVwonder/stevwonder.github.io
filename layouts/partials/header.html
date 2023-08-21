@@ -1,0 +1,77 @@
+<header id="header">
+  <div id="header-wrap" class="border-0">
+	<div class="container">
+	  <div class="header-row justify-content-lg-between px-4 px-xl-0">
+
+		<!-- Logo
+			 ============================================= -->
+		<div class="order-1 order-lg-1 text-lg-center py-lg-4 mt-lg-5">
+		  <img src="img/profile.jpg" alt="Stephen's Profile Photo" class="rounded-circle square square-lg mb-lg-3 d-none d-lg-inline-block">
+		  <div class="">
+			<h3 class="mb-0 fw-normal lh-1">{{.Title}}</h3>
+			<p class="mb-0 op-06 fw-light">Software Engineer</p>
+		  </div>
+		</div><!-- #logo end -->
+
+		<div class="primary-menu-trigger order-3 order-lg-2">
+		  <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+			<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+		  </button>
+		</div>
+
+		<div class="header-misc order-2 order-lg-last ms-auto">
+		  <div class="d-flex justify-content-center w-100 py-4">
+			<a href="{{ .Site.Data.general.github }}" class="social-icon si-small rounded-circle bg-contrast-200 mx-lg-1 h-bg-github" style="--cnvs-socialicon-border: 0; --cnvs-socialicon-lineheight: 2rem">
+			  <i class="fa-brands fa-github"></i>
+			  <i class="fa-brands fa-github"></i>
+			</a>
+
+			<a href="{{ .Site.Data.general.twitter }}" class="social-icon si-small rounded-circle bg-contrast-200 mx-lg-1 h-bg-twitter" style="--cnvs-socialicon-border: 0; --cnvs-socialicon-lineheight: 2rem">
+			  <i class="fa-brands fa-twitter"></i>
+			  <i class="fa-brands fa-twitter"></i>
+			</a>
+
+			<a href="{{ .Site.Data.general.instagram }}" class="social-icon si-small rounded-circle bg-contrast-200 mx-lg-1 h-bg-instagram" style="--cnvs-socialicon-border: 0; --cnvs-socialicon-lineheight: 2rem">
+			  <i class="fa-brands fa-instagram"></i>
+			  <i class="fa-brands fa-instagram"></i>
+			</a>
+
+			<a href="{{ .Site.Data.general.linkedin }}" class="social-icon si-small rounded-circle bg-contrast-200 mx-lg-1 h-bg-linkedin" style="--cnvs-socialicon-border: 0; --cnvs-socialicon-lineheight: 2rem">
+			  <i class="fa-brands fa-linkedin"></i>
+			  <i class="fa-brands fa-linkedin"></i>
+			</a>
+		  </div>
+		</div>
+
+		<!-- Primary Navigation
+			 ============================================= -->
+		<nav class="primary-menu order-last order-lg-2">
+
+          {{ $sections:= site.Data.sections }}
+          {{ if $sections }}
+		  <ul class="menu-container one-page-menu" data-easing="easeOutExpo" data-speed="1250" data-offset="0">
+            {{ range (where (sort $sections "section.weight") ".section.enable" true) }}
+            {{ $sectionID := replace (lower .section.name) " " "-"  }}
+            {{ if .section.id }}
+            {{ $sectionID = .section.id }}
+            {{ end }}
+            {{ $sectionRef := (printf "#section-%s" $sectionID) }}
+			<li class="menu-item">
+              <a class="menu-link" href="#" data-href="{{ $sectionRef }}">
+                <div>
+                  <i class="{{ .section.icon }}"></i> {{ .section.name }}
+                </div>
+              </a>
+            </li>
+            {{ end }}
+            <a href="files/herbein-cv.pdf" class="button button-rounded button-amber">
+              <i class="bi-download"></i>My CV
+            </a>
+		  </ul>
+          {{ end }}
+		</nav><!-- #primary-menu end -->
+	  </div>
+	</div>
+  </div>
+  <div class="header-wrap-clone"></div>
+</header><!-- #header end -->

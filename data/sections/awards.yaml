@@ -1,0 +1,45 @@
+section:
+  name: Awards
+  id: awards
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  template: sections/awards.html
+  icon: bi-award
+
+awards:
+  professional:
+    - name: "Best Paper Award"
+      issuer: "International Conference on e-Science"
+      year: 2022
+    - name: "R&D 100 Award - Flux"
+      issuer: "R&D World"
+      year: 2021
+    - year: 2019
+      name: Spot Award
+      issuer: LLNL ATDM Next Generation Computing Enablement
+    - year: 2019
+      name: Dissertation Award
+      issuer: IEEE Technical Committee on Scalable Computing
+    - year: 2016
+      name: Best Poster
+      issuer: Annual LLNL Poster Symposium
+    - year: 2013
+      name: Undergraduate Student Research Competition Award
+      issuer: ACM
+  academic:
+    - year: 2016
+      name: Outstanding Graduate Student Award
+      issuer: CIS Department
+    - year: 2014
+      name: Outstanding Senior Student Award
+      issuer: CIS Department
+    - year: 2013
+      name: Outstanding Junior Student Award
+      issuer: CIS Department
+    - year: Fall 2012
+      name: General Honors Award
+      issuer: University of Delaware
+    - year: 2011 - 2014
+      name: Presidential Achievement Scholarship
+      issuer: University of Delaware
