@@ -6,7 +6,7 @@
 		<!-- Logo
 			 ============================================= -->
 		<div class="order-1 order-lg-1 text-lg-center py-lg-4 mt-lg-5">
-		  <img src="img/profile.jpg" alt="Stephen's Profile Photo" class="rounded-circle square square-lg mb-lg-3 d-none d-lg-inline-block">
+		  <img src="/img/profile.jpg" alt="Stephen's Profile Photo" class="rounded-circle square square-lg mb-lg-3 d-none d-lg-inline-block">
 		  <div class="">
 			<h3 class="mb-0 fw-normal lh-1">Stephen Herbein</h3>
 			<p class="mb-0 op-06 fw-light">Software Engineer</p>
@@ -57,7 +57,7 @@
             {{ end }}
             {{ $sectionRef := (printf "#section-%s" $sectionID) }}
 			<li class="menu-item">
-              <a class="menu-link" href="#" data-href="{{ $sectionRef }}">
+              <a class="menu-link" href="/{{ $sectionRef }}" data-href="{{ $sectionRef }}">
                 <div>
                   <i class="{{ .section.icon }}"></i> {{ .section.name }}
                 </div>

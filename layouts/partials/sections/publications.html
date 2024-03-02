@@ -1,7 +1,7 @@
 <div class="container mw-md">
-  <h2 class="text-center display-3 fw-semibold ls-2 mb-5"><i class="{{ .section.icon }} color"></i> {{ .section.name }}</h2>
+  <h2 class="text-center display-3 fw-semibold ls-2 mb-5"><i class="{{ .Page.section.icon }} color"></i> {{ .Page.section.name }}</h2>
   <div class="row gy-4">
-    {{ range $idx, $val := .publications }}
+    {{ range $idx, $val := .Page.publications }}
 	<div class="col-12">
 	  <div class="card bg-contrast-100 rounded-1 border-0">
 		<div class="card-body p-4">

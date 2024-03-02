@@ -1,0 +1,8 @@
+section:
+  name: Projects
+  id: projects
+  enable: false
+  weight: 6
+  showOnNavbar: false
+  icon: bi-person-circle
+  template: sections/projects.html

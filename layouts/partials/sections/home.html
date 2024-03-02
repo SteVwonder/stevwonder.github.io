@@ -1,7 +1,12 @@
 {{ $sections:= site.Data.sections }}
 
+{{ $insertLine := false }}
 {{ range $idx, $val := sort $sections "section.weight" }}
   {{ if $val.section.enable }}
+    {{ if $insertLine }}
+    <div class="line"></div>
+    {{ end }}
+    {{ $insertLine = true }}
     {{ $sectionId := (printf "section-%s" (lower $val.section.id)) }}
     {{ $classes := slice "page-section py-5" }}
     {{ if eq $idx 0 }}
@@ -9,11 +14,10 @@
     {{ end }}
     <div id="{{ $sectionId }}" class="{{ delimit $classes " " }}">
     {{ if .section.template }}
-      {{- partial .section.template . -}}
+      {{- partial .section.template (dict "Page" . "Site" $.Site) -}}
     {{ else }}
       {{- partial (printf "sections/%s.html" (replace (lower .section.id) " " "-")) . -}}
     {{ end }}
     </div>
-    <div class="line"></div>
   {{ end }}
 {{ end }}

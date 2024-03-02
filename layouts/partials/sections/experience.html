@@ -2,11 +2,11 @@
   <div class="row gx-5 justify-content-center">
     <div class="col-md-12">
       <h2 class="text-center display-3 fw-semibold ls-2 mb-5">
-        <i class="{{ .section.icon }} color"></i>
+        <i class="{{ .Page.section.icon }} color"></i>
         Experience
       </h2>
-      {{ $maxIdx := (sub (len .experience) 1) }}
-      {{ range $idx, $val := .experience }}
+      {{ $maxIdx := (sub (len .Page.experience) 1) }}
+      {{ range $idx, $val := .Page.experience }}
       {{ if (eq $idx 0) }}
       <div class="toggle mb-0" data-state="open">
         {{ else }}

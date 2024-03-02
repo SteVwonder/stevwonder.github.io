@@ -1,0 +1,51 @@
+{{ define "main" }}
+    <div class="homepage-content">
+		<!-- Page Title
+		============================================= -->
+		<section class="page-title bg-transparent">
+			<div class="container">
+				<div class="page-title-row">
+					<div class="page-title-content">
+						<h1>{{ .Title }}</h1>
+					</div>
+				</div>
+			</div>
+		</section><!-- .page-title end -->
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<!-- Posts
+					============================================= -->
+					<div id="posts" class="row gutter-30">
+                      {{ range .Pages }}
+						<div class="entry col-md-4 col-sm-6 col-12">
+							<div class="grid-inner">
+								<div class="entry-image">
+								  <a href="{{ .RelPermalink }}" data-lightbox="image">
+                                    <img src="/{{ .Params.profile_img }}" alt="Post Image">
+                                  </a>
+								</div>
+								<div class="entry-title">
+									<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> {{ .Date.Format "2006-01-02" }}</li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>{{ .Params.lede }}</p>
+									<a href="{{ .RelPermalink }}" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+                        {{ end }}
+					</div><!-- #posts end -->
+				</div>
+			</div>
+		</section><!-- #content end -->
+    <div>
+{{ end }}

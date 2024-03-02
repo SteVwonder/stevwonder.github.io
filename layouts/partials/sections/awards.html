@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <div class="row">
       <h2 class="text-center display-3 fw-semibold ls-2 mb-0">
-        <i class="{{ .section.icon }} color"></i>
+        <i class="{{ .Page.section.icon }} color"></i>
         Awards
       </h2>
       <div class="col-md-6 mt-5">
@@ -11,8 +11,8 @@
           Professional
         </h3>
 		<div class="row feature-box-border-vertical col-mb-30 justify-content-center align-items-center">
-          {{ $maxIdx := (sub (len .awards.professional) 1) }}
-          {{ range $idx, $val := (sort .awards.professional "year" "desc") }}
+          {{ $maxIdx := (sub (len .Page.awards.professional) 1) }}
+          {{ range $idx, $val := (sort .Page.awards.professional "year" "desc") }}
           {{ $classes := slice "col-12" "feature-box" "fbox-active" "fbox-light" "fbox-sm" }}
           {{ if (lt $idx $maxIdx) }}
           {{ $classes = $classes | append "fbox-border" }}
@@ -40,8 +40,8 @@
           Academic
         </h3>
 	    <div class="row feature-box-border-vertical col-mb-30 justify-content-center align-items-center">
-          {{ $maxIdx := (sub (len .awards.academic) 1) }}
-          {{ range $idx, $val := (sort .awards.academic "year" "desc") }}
+          {{ $maxIdx := (sub (len .Page.awards.academic) 1) }}
+          {{ range $idx, $val := (sort .Page.awards.academic "year" "desc") }}
           {{ $classes := slice "col-12" "feature-box" "fbox-active" "fbox-light" "fbox-sm" }}
           {{ if (lt $idx $maxIdx) }}
           {{ $classes = $classes | append "fbox-border" }}

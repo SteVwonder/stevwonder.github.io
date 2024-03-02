@@ -12,6 +12,6 @@ designation: Senior Software Engineer
 #quote: "Foo bar baz"
 #quotee: Bob
 
-bigProfilePicture: img/profile-big.jpg
+bigProfilePicture: /img/profile-big.jpg
 
 summary: 'I am a software engineer specializing in distributed systems and job scheduling. I am passionate about learning and making the world a better place.'

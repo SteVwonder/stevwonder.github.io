@@ -12,8 +12,8 @@
             Degrees
           </h3>
 		  <div class="feature-box-border-vertical col-mb-30 justify-content-center align-items-center">
-            {{ $maxIdx := (sub (len .degrees) 1) }}
-            {{ range $idx, $val := (sort .degrees "year" "desc") }}
+            {{ $maxIdx := (sub (len .Page.degrees) 1) }}
+            {{ range $idx, $val := (sort .Page.degrees "year" "desc") }}
             {{ $classes := slice "col-12" "feature-box" "fbox-active" "fbox-light" "fbox-sm" }}
             {{ if (lt $idx $maxIdx) }}
             {{ $classes = $classes | append "fbox-border" }}
@@ -45,7 +45,7 @@
             Online Courses
           </h3>
 		  <div class="clear"></div>
-          {{ range $elem_idx, $val := (sort .online "year" "desc") }}
+          {{ range $elem_idx, $val := (sort .Page.online "year" "desc") }}
           {{ $classes := slice "feature-box" "fbox-plain" "fbox-sm" }}
           {{ if gt $elem_idx 0 }}
           {{ $classes = $classes | append "mt-5" }}
