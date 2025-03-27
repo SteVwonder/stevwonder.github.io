@@ -9,6 +9,9 @@ section:
 
 awards:
   professional:
+    - name: "R&D 100 Award - ZFP"
+      issuer: "R&D World"
+      year: 2023
     - name: "Best Paper Award"
       issuer: "International Conference on e-Science"
       year: 2022
