@@ -2,4 +2,4 @@ baseURL = 'https://herbein.net/'
 languageCode = 'en-us'
 title = 'Stephen Herbein'
 
-[taxonomies]
+disableKinds = ["taxonomy", "term"]
